@@ -14,3 +14,21 @@ AIDE : voici les étapes :
 5. En fin de longueur du tableau, on redémarre au début de l'index
 */
 
+const slideshow = {
+    gallery: ['img/becode-seal.svg', 'img/bell.svg', 'img/clock.svg', 'img/compass.svg', 'img/kiss.svg', 'img/kiss-wink-heart.svg', 'img/lemon.svg', 'img/map.svg'],
+    imgElt: document.querySelector('img'),
+    buttonElt: document.querySelector('#next'),
+    index: 0,
+    changementImage() {
+        this.buttonElt.addEventListener('click', () => {
+            this.imgElt.src = this.gallery[this.index];
+            this.index++;
+            if (this.index === this.gallery.length) {
+                this.index = 0;
+            }
+        });
+    }
+};
+
+slideshow.changementImage();
+

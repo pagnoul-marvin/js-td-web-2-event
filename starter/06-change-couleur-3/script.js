@@ -9,3 +9,14 @@ EXERCICE 6 : Change couleur (3)
 */
 
 // ÉTAPE 1 : on ne gère que le clic
+
+
+function changementCouleur() {
+    const btnElt = document.getElementById('colorBtn');
+    const inputElt = document.getElementById('colorChoice');
+    btnElt.addEventListener('click', (e) => {
+        document.body.style.backgroundColor = inputElt.value;
+    })
+}
+
+changementCouleur();

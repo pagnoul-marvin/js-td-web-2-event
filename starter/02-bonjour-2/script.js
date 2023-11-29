@@ -11,10 +11,15 @@
    * 3°) avec une arrow fonction et une expression conditionnelle
 */
 
+document.getElementById('hello').addEventListener('click', () =>{
+    document.querySelector('p').textContent = `Bonjour ${document.getElementById('prenom').value}`;
+})
 
 // Autre écriture
 
-
+document.getElementById('hello').addEventListener('click', function prenom() {
+    document.querySelector('p').textContent = `Bonjour ${document.getElementById('prenom').value}`;
+})
 
 
 // Plus court : écriture ES6 avec expression conditionnelle

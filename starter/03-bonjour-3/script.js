@@ -5,7 +5,11 @@ Au clic sur le bouton,
 - fais disparaître le bouton
 */
 
-
+document.getElementById('hello').addEventListener('click', () => {
+    document.querySelector('.content :nth-child(3)').insertAdjacentHTML('beforeend', <img src="bonjour.jpg" alt="bonjour"/>);
+    const buttonElt = document.getElementById('hello');
+    document.querySelector('.material:first-child').removeChild(buttonElt);
+})
 
 /*
 Chaque type d'événement est associé à un objet Event spécifique qui fournit des informations sur l'événement via ses propriétés.
@@ -21,13 +25,13 @@ Quand l'événement se déclenche, JavaScript crée un objet Event qui peut êtr
 */
 
 
+
 /* N.B. e.currentTarget représente, en français, "la cible du clic", c.-à-d. ici le bouton sur lequel on vient de cliquer, donc le bouton qui a déclenché la fonction.
 À l'intérieur de la fonction, c'est donc un moyen automatique de faire référence à l'élément qui a déclenché la fonction.
 C'est une notion IMPORTANTE, essentielle, très très souvent utilisée dans la programmation événementielle.
 */
 
 // autre écriture
-
 
 
 // Écriture ES6

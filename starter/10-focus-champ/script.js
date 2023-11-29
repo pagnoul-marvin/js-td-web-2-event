@@ -15,3 +15,27 @@ Au focus sur le champ, vide-le et change sa couleur de fond. Lorsqu'on clique en
 
 
 // Plusieurs champs
+
+const changementCouleur = {
+    inputElt: document.querySelectorAll('input'),
+    focusColor: `rgb(${Math.floor((Math.random() * 255) + 1)},${Math.floor((Math.random() * 255) + 1)},${Math.floor((Math.random() * 255) + 1)})`,
+    blurColor: 'rgba(255,255,255,0)',
+    init() {
+        this.addEventListeners();
+    },
+    addEventListeners() {
+        this.inputElt.forEach(input => {
+            input.addEventListener('focus', this.focus.bind(this));
+            input.addEventListener('blur', this.blur.bind(this));
+        });
+    },
+    focus(e) {
+        e.currentTarget.style.backgroundColor = this.focusColor;
+    },
+    blur(e) {
+        e.currentTarget.style.backgroundColor = this.blurColor;
+        e.currentTarget.value = "";
+    }
+};
+
+changementCouleur.init();
