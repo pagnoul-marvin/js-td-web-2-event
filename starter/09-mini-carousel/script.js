@@ -15,7 +15,7 @@ AIDE : voici les étapes :
 */
 
 const slideshow = {
-    gallery: ['img/becode-seal.svg', 'img/bell.svg', 'img/clock.svg', 'img/compass.svg', 'img/kiss.svg', 'img/kiss-wink-heart.svg', 'img/lemon.svg', 'img/map.svg'],
+    gallery: ['img/becode-seal.png', 'img/bell.svg', 'img/clock.svg', 'img/compass.svg', 'img/kiss.svg', 'img/kiss-wink-heart.svg', 'img/lemon.svg', 'img/map.svg'],
     imgElt: document.querySelector('img'),
     buttonElt: document.querySelector('#next'),
     index: 0,
